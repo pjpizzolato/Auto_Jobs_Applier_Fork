@@ -1,4 +1,7 @@
-remote: false
+workplace:
+   Hybrid: True
+   Remote: True
+   On-site: True
 
 experienceLevel:
   internship: False

@@ -51,7 +51,7 @@ class ConfigValidator:
     def validate_config(config_yaml_path: Path) -> dict:
         parameters = ConfigValidator.validate_yaml_file(config_yaml_path)
         required_keys = {
-            "remote": bool,
+            "workplace": dict,
             "experienceLevel": dict,
             "jobTypes": dict,
             "date": dict,
@@ -85,6 +85,18 @@ class ConfigValidator:
                     raise ConfigError(
                         f"Invalid type for key '{key}' in config file {config_yaml_path}. Expected {expected_type}."
                     )
+
+            # Validate workplace options
+        workplace_options = ["Hybrid", "Remote", "On-site"]
+        for option in workplace_options:
+            if option not in parameters["workplace"]:
+                raise ConfigError(
+                    f"Missing workplace option '{option}' in config file {config_yaml_path}"
+                )
+        if not isinstance(parameters["workplace"][option], bool):
+            raise ConfigError(
+                f"Workplace option '{option}' must be a boolean in config file {config_yaml_path}"
+            )
 
         experience_levels = [
             "internship",

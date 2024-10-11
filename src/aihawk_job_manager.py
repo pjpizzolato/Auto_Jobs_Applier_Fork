@@ -395,8 +395,18 @@ class AIHawkJobManager:
     def get_base_search_url(self, parameters):
         logger.debug("Constructing base search URL")
         url_parts = []
-        if parameters["remote"]:
-            url_parts.append("f_CF=f_WRA")
+
+        # Workplace filter
+        workplace_filters = []
+        if parameters["workplace"]["Remote"]:
+            workplace_filters.append("2")
+        if parameters["workplace"]["Hybrid"]:
+            workplace_filters.append("3")
+        if parameters["workplace"]["On-site"]:
+            workplace_filters.append("1")
+        if workplace_filters:
+            url_parts.append(f"f_WT={'%2C'.join(workplace_filters)}")
+
         # Experience level mapping
         experience_level_mapping = {
             "internship": "1",
