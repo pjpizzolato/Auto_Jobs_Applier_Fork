@@ -60,14 +60,20 @@ experience_details:
 
 projects:
   - name: "SoundAR"
-    description: "Using three microphones with peak detector circuits, we were able to read the values from the microphones via a Rasberry pi pico. Triangulate the sound location and pinpoint the location of the sound"
-    link: "http:/example.com"
+    description: "Using three microphones with peak detector circuits, we were able to read the values from the microphones via a Rasberry pi pico. Triangulate the sound location and pinpoint the location of the sound. We also controlled a servo motor via the PWM signal"
+
+  - name: "Cartpole using DAgger Learning"
+    description: "Used DAgger learning to develop a policy that is as efficient as the experts even when the agent could only view part of the state May 2023. Managed to successfully balance the pole for the maximum amount of time in the Cartpole in OpenAI gym. "
+
+  - name: "Lunar Landing"
+    description: " Designed and implemented a Deep Q Network(DQN) in Pytorch to successfully land a spaceship between two flags on the moon (Lunar Lander-V2 in OpenAI gym). Managed successful landing including hyper-parameter tuning"
+
 
 
 
 achievements:
   - name: "Dean List"
-    description: "At Cornell"
+    description: "Exceptional Grades at Cornell"
 
 
 
@@ -102,7 +108,7 @@ legal_authorization:
   us_work_authorization: "Yes"
   requires_us_visa: "No"
   requires_us_sponsorship: "No"
-  requires_eu_visa: "No"
+  requires_eu_visa: "Yes"
   legally_allowed_to_work_in_eu: "No"
   legally_allowed_to_work_in_us: "Yes"
   requires_eu_sponsorship: "Yes"
@@ -110,7 +116,7 @@ legal_authorization:
   requires_canada_visa: "Yes"
   legally_allowed_to_work_in_canada: "No"
   requires_canada_sponsorship: "Yes"
-  uk_work_authorization: "Yes"
+  uk_work_authorization: "No"
   requires_uk_visa: "Yes"
   legally_allowed_to_work_in_uk: "No"
   requires_uk_sponsorship: "Yes"
