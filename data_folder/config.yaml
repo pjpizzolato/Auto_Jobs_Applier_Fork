@@ -1,10 +1,10 @@
-remote: true
+remote: false
 
 experienceLevel:
-  internship: false
-  entry: true
-  associate: true
-  mid-senior level: true
+  internship: False
+  entry: True
+  associate: True
+  mid-senior level: false
   director: false
   executive: false
 
@@ -12,30 +12,30 @@ jobTypes:
   full-time: true
   contract: false
   part-time: false
-  temporary: true
+  temporary: False
   internship: false
   other: false
-  volunteer: true
+  volunteer: false
 
 date:
   all time: false
   month: false
-  week: false
-  24 hours: true
+  week: True
+  24 hours: False
 
 positions:
   - Software engineer
 
 locations:
-  - Germany
+  - United States
 
 apply_once_at_company: true
 
 distance: 100
 
 company_blacklist:
-  - wayfair
-  - Crossover
+  - SpaceEx
+  - Tesla
 
 title_blacklist:
   - word1
