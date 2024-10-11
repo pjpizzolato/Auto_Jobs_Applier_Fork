@@ -3,7 +3,7 @@ remote: false
 experienceLevel:
   internship: False
   entry: True
-  associate: True
+  associate: False
   mid-senior level: false
   director: false
   executive: false
@@ -16,6 +16,8 @@ jobTypes:
   internship: false
   other: false
   volunteer: false
+
+Salary: 80000
 
 date:
   all time: false
@@ -38,12 +40,12 @@ company_blacklist:
   - Tesla
 
 title_blacklist:
-  - word1
+  - WebDeveloper
   - word2
 
 job_applicants_threshold:
   min_applicants: 0
-  max_applicants: 30
+  max_applicants: 1000
 
 llm_model_type: openai
 llm_model: 'gpt-4o-mini'

@@ -415,7 +415,30 @@ class AIHawkJobManager:
 
         if experience_levels:
             url_parts.append(f"f_E={','.join(experience_levels)}")
+
+            # Salary filter
+        salary = parameters.get("Salary")
+        if salary:
+            salary_ranges = {
+                40000: "1",
+                60000: "2",
+                80000: "3",
+                100000: "4",
+                120000: "5",
+                140000: "6",
+                160000: "7",
+                180000: "8",
+                200000: "9",
+            }
+        for threshold, code in salary_ranges.items():
+            if salary <= threshold:
+                url_parts.append(f"f_SB2={code}")
+                break
+        else:
+            url_parts.append(f"f_SB2=9")  # If salary is above all thresholds
+
         url_parts.append(f"distance={parameters['distance']}")
+
         job_types = [
             key[0].upper()
             for key, value in parameters.get("jobTypes", {}).items()
